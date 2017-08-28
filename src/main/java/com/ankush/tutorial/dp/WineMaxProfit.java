@@ -18,6 +18,22 @@ public class WineMaxProfit {
     You want to find out, what is the maximum profit you can get, if you sell the wines in optimal order?"
      */
 
+    int n; //n wines
+    int price[]; //price of n wines
+    int dp[][];
+
+    public WineMaxProfit() {
+    }
+
+    public WineMaxProfit(int n) {
+        this.n = n;
+        price = new int[n];
+        dp = new int[n][n];
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                dp[i][j] = -1;
+    }
+
     public int getN() {
         return n;
     }
@@ -34,33 +50,16 @@ public class WineMaxProfit {
         this.price = price;
     }
 
-    int n; //n wines
-    int price[]; //price of n wines
-
-    int dp[][];
-
-    public WineMaxProfit(){
-    }
-
-    public WineMaxProfit(int n){
-        this.n = n;
-        price = new int[n];
-        dp = new int[n][n];
-        for(int i = 0; i< n ;i++)
-            for(int j = 0; j<n ; j++)
-                dp[i][j] = -1;
-    }
-
-    public int maxProfit(int start, int end){
-        if(start > end)
+    public int maxProfit(int start, int end) {
+        if (start > end)
             return 0;
 
-        if(dp[start][end] != -1 )
+        if (dp[start][end] != -1)
             return dp[start][end];
 
-        int year = n - (end-start+1) + 1;
+        int year = n - (end - start + 1) + 1;
 
-        dp[start][end]  = Math.max((maxProfit(start+1,end)+year*price[start]), maxProfit(start,end-1)+year*price[end]);
+        dp[start][end] = Math.max((maxProfit(start + 1, end) + year * price[start]), maxProfit(start, end - 1) + year * price[end]);
         return dp[start][end];
     }
 }

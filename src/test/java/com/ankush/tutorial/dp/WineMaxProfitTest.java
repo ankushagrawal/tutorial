@@ -17,20 +17,20 @@ public class WineMaxProfitTest {
     }
 
     @Test
-    public void test1(){
-        WineMaxProfit wineMaxProfit  = new WineMaxProfit(5);
-        int[] price = new int[]{2,3,5,1,4};
+    public void test1() {
+        WineMaxProfit wineMaxProfit = new WineMaxProfit(5);
+        int[] price = new int[]{2, 3, 5, 1, 4};
         wineMaxProfit.setPrice(price);
-        int profit = wineMaxProfit.maxProfit(0,price.length-1);
-        assertEquals(50,profit);
+        int profit = wineMaxProfit.maxProfit(0, price.length - 1);
+        assertEquals(50, profit);
     }
 
     @Test
-    public void test2(){
-        WineMaxProfit wineMaxProfit  = new WineMaxProfit(4);
-        int[] price = new int[]{1,4,2,3};
+    public void test2() {
+        WineMaxProfit wineMaxProfit = new WineMaxProfit(4);
+        int[] price = new int[]{1, 4, 2, 3};
         wineMaxProfit.setPrice(price);
-        int profit = wineMaxProfit.maxProfit(0,price.length-1);
+        int profit = wineMaxProfit.maxProfit(0, price.length - 1);
         assertEquals(29, profit);
     }
 
