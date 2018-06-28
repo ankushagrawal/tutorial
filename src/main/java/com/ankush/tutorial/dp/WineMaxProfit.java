@@ -1,4 +1,4 @@
-package main.java.com.ankush.tutorial.dp;
+package com.ankush.tutorial.dp;
 
 /**
  * Created by ankush.a on 28/08/17.

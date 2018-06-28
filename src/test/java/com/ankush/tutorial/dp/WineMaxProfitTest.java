@@ -1,6 +1,5 @@
-package test.java.com.ankush.tutorial.dp;
+package com.ankush.tutorial.dp;
 
-import main.java.com.ankush.tutorial.dp.WineMaxProfit;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
