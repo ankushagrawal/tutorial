@@ -10,9 +10,9 @@ public class Node<T> {
         this.value = value;
     }
 
-    private T value;
-    private Node left;
-    private Node right;
+    public T value;
+    public Node left;
+    public Node right;
 
     public Node(T value) {
         this.value = value;
