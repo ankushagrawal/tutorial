@@ -1,6 +1,5 @@
 package com.ankush.tutorial.tree;
 
-import com.ankush.tutorial.linklist.LinkList;
 
 import java.util.*;
 
@@ -205,18 +204,6 @@ public class BinarySearchTree {
         System.out.print("BFS: Level order : ");
         bfs(root);
         System.out.println();
-    }
-
-    public void convertToDoublyLinkedList(){
-        LinkList linkList = new LinkList();
-    }
-
-    private void dll(Node node, LinkList linkList){
-        if (node != null){
-            dll(node.getLeft(), linkList);
-            System.out.print(" " + node.getValue());
-            dll(node.getRight(), linkList);
-        }
     }
 
     public boolean isValidBST(Node<Integer> node) {
